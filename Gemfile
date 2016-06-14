@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 #https://github.com/plataformatec/devise
 gem 'devise'
-
+gem 'pusher'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 gem 'rails-erd'
