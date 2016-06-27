@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :gameusers
   resources :games
   devise_for :users
   root "pages#home"
