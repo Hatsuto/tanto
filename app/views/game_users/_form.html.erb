@@ -1,10 +1,10 @@
-<%= form_for(@gameuser) do |f| %>
-  <% if @gameuser.errors.any? %>
+<%= form_for(@game_user) do |f| %>
+  <% if @game_user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@gameuser.errors.count, "error") %> prohibited this gameuser from being saved:</h2>
+      <h2><%= pluralize(@game_user.errors.count, "error") %> prohibited this gameuser from being saved:</h2>
 
       <ul>
-      <% @gameuser.errors.full_messages.each do |message| %>
+      <% @game_user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

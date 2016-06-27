@@ -1,10 +1,10 @@
 class GameUsersController < ApplicationController
-  before_action :set_gameuser, only: [:show, :edit, :update, :destroy]
+  before_action :set_game_user, only: [:show, :edit, :update, :destroy]
 
   # GET /gameusers
   # GET /gameusers.json
   def index
-    @gameusers = Gameuser.all
+    @game_users = GameUser.all
   end
 
   # GET /gameusers/1
@@ -14,7 +14,7 @@ class GameUsersController < ApplicationController
 
   # GET /gameusers/new
   def new
-    @gameuser = Gameuser.new
+    @game_user = GameUser.new
   end
 
   # GET /gameusers/1/edit
@@ -24,15 +24,15 @@ class GameUsersController < ApplicationController
   # POST /gameusers
   # POST /gameusers.json
   def create
-    @gameuser = Gameuser.new(gameuser_params)
+    @game_user = GameUser.new(game_user_params)
 
     respond_to do |format|
-      if @gameuser.save
-        format.html { redirect_to @gameuser, notice: 'Gameuser was successfully created.' }
-        format.json { render :show, status: :created, location: @gameuser }
+      if @game_user.save
+        format.html { redirect_to @game_user, notice: 'GameUser was successfully created.' }
+        format.json { render :show, status: :created, location: @game_user }
       else
         format.html { render :new }
-        format.json { render json: @gameuser.errors, status: :unprocessable_entity }
+        format.json { render json: @game_user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +41,12 @@ class GameUsersController < ApplicationController
   # PATCH/PUT /gameusers/1.json
   def update
     respond_to do |format|
-      if @gameuser.update(gameuser_params)
-        format.html { redirect_to @gameuser, notice: 'Gameuser was successfully updated.' }
-        format.json { render :show, status: :ok, location: @gameuser }
+      if @game_user.update(game_user_params)
+        format.html { redirect_to @game_user, notice: 'GameUser was successfully updated.' }
+        format.json { render :show, status: :ok, location: @game_user }
       else
         format.html { render :edit }
-        format.json { render json: @gameuser.errors, status: :unprocessable_entity }
+        format.json { render json: @game_user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,19 +56,19 @@ class GameUsersController < ApplicationController
   def destroy
     @gameuser.destroy
     respond_to do |format|
-      format.html { redirect_to gameusers_url, notice: 'Gameuser was successfully destroyed.' }
+      format.html { redirect_to game_users_url, notice: 'GameUser was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_gameuser
-      @gameuser = Gameuser.find(params[:id])
+    def set_game_user
+      @game_user = GameUser.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def gameuser_params
-      params.fetch(:gameuser, {})
+    def game_user_params
+      params.fetch(:game_user, {})
     end
 end

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Gameusers</h1>
+<h1>Listing GameUsers</h1>
 
 <table>
   <thead>
@@ -10,11 +10,11 @@
   </thead>
 
   <tbody>
-    <% @gameusers.each do |gameuser| %>
+    <% @game_users.each do |game_user| %>
       <tr>
-        <td><%= link_to 'Show', gameuser %></td>
-        <td><%= link_to 'Edit', edit_gameuser_path(gameuser) %></td>
-        <td><%= link_to 'Destroy', gameuser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', game_user %></td>
+        <td><%= link_to 'Edit', edit_game_user_path(game_user) %></td>
+        <td><%= link_to 'Destroy', game_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Gameuser', new_gameuser_path %>
+<%= link_to 'New GameUser', new_game_user_path %>
