@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  card_text: MyText
+  victory_points: 1
+  employ_cost: 1
+  job_title: MyString
+  ability: MyText
+  special_effect: MyText
+
+two:
+  name: MyString
+  card_text: MyText
+  victory_points: 1
+  employ_cost: 1
+  job_title: MyString
+  ability: MyText
+  special_effect: MyText
