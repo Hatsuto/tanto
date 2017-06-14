@@ -61,6 +61,16 @@ class GamesController < ApplicationController
     end
   end
 
+  #This is the server doing server things and then sending out the update
+  #Make sure to do updates of the backend and then call Pusher.trigger
+  #Make sure when you make a new method in the controller to update /config/routes.rb
+  def game_button_donut
+    Pusher.trigger('main-channel', 'main-event', {
+      message: 'hello world from donut' + game_params[:somefuck]
+    })
+    head :ok
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_game
@@ -69,6 +79,7 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.fetch(:game, {})
+      # params.fetch(:game, {})
+      params.permit(:somefuck)
     end
 end
